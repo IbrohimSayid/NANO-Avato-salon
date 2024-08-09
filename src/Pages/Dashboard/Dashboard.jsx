@@ -32,7 +32,7 @@ function Dashboard() {
   return (
     <>
       <div className="productsForm">
-        <h2>Add New Reciep</h2>
+        <h2>Add New Product</h2>
         <form onSubmit={handleSubmit}>
           <div>
             <label>Product Name:</label>
@@ -41,16 +41,16 @@ function Dashboard() {
               name="productName"
               value={product.productName}
               onChange={handleChange}
-              placeholder="Enter your meal name"
+              placeholder="Enter your product name"
             />
           </div>
           <div>
-            <label>Cooking time:</label>
+            <label>Product Category:</label>
             <input
               name="productCategory"
               value={product.productCategory}
               onChange={handleChange}
-              placeholder="Enter your time of your meal"
+              placeholder="Enter your product cteagory"
             ></input>
           </div>
           <div>

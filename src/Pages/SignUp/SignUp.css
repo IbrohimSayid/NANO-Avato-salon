@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 html {
   height: 100%;
@@ -9,7 +10,7 @@ html {
 }
 
 body {
-  background-color: #03045e;
+  background-color: #22223b;
 }
 
 .signupCotainer {
@@ -23,8 +24,8 @@ body {
 .title {
   display: flex;
   flex-direction: column;
-  color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f2e9e4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .title h1 {
   font-size: 30px;
@@ -32,10 +33,10 @@ body {
 .title p {
   font-size: 14px;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .signupForm {
-  border: 2px solid #bfdbf7;
+  border: 2px solid #f2e9e4;
 }
 .signupInput {
   display: flex;
@@ -45,7 +46,7 @@ body {
 .signupInput label {
   font-size: 14px;
   line-height: 19.6px;
-  color: #fff;
+  color: #f2e9e4;
   text-align: start;
 }
 .signupInput input {
@@ -53,9 +54,9 @@ body {
   padding: 15px 20px;
   border-radius: 20px;
   background-color: transparent;
-  color: #fff;
+  color: #f2e9e4;
   outline: none;
-  border: 2px solid #75768b;
+  border: 2px solid #f2e9e4;
 }
 
 .signupInput input::after {
@@ -63,38 +64,55 @@ body {
 }
 
 .signupInput input::-moz-placeholder {
-  color: #fff;
+  color: #f2e9e4;
 }
 .signupInput input::placeholder {
-  color: #fff;
+  color: #f2e9e4;
   font-family: "Poppins", sans-serif;
 }
 .checkboxInput {
-  color: #fff;
+  color: #f2e9e4;
 }
 .signupBtn {
   width: 350px;
   height: 45px;
-  color: #fff;
-  background-color: #0075ff;
+  color: #f2e9e4;
+  background-color: #22223b;
   border: none;
   outline: none;
   border-radius: 12px;
   cursor: pointer;
+  border: 2px solid #f2e9e4;
+  transition: all 200ms ease-in-out;
 }
 .signupBtn:hover {
-  background-color: #033e81;
+  background-color: #f2e9e4;
+  color: #22223b;
 }
-
 .checkboxInput {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px; /* Space between checkbox and label */
+  color: #f2e9e4;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.checkboxInput input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #f2e9e4;
+}
+
+.checkboxInput label {
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #fca311;
+  margin: 0;
 }
 
 .haveAccount {
-  color: #a0aec0;
+  color: #9a8c98;
   display: flex;
   align-items: center;
   font-size: 15px;

@@ -4,55 +4,62 @@
   align-items: center;
   margin-top: 2%;
   gap: 7%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #00b5ff;
 }
 
-form {
+.dashboardForm {
   padding: 20px;
   border-radius: 10px;
+  width: 40%;
+  margin: 0 auto;
 }
 
-form div {
+.dashboardForm div {
   display: flex;
+  gap: 15px;
   flex-direction: column;
-  gap: 10px;
-  width: 500px;
+  align-items: start;
+  width: 100%;
 }
 
 form div label {
+  margin-top: 10px;
   font-size: 15px;
   font-weight: 600;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form div input {
+  width: 100%;
   padding: 10px 15px;
   border-radius: 5px;
-  outline: 2px solid #e5e5e5;
+  outline: 2px solid #0095dd;
   border: none;
 }
 
 form textarea {
+  width: 100%;
   padding: 10px 15px;
   border-radius: 5px;
   height: 70px;
   border: none;
-  outline: 2px solid #e5e5e5;
+  outline: 2px solid #00b5ff;
+  margin-bottom: 30px;
 }
 
-form button {
+.dashboardForm button {
   width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: 2px solid #00B5FF;
-  background-color: #00B5FF;
-  font-weight: 600;
-  font-size: 14px;
+  height: 45px;
+  color: #f2e9e4;
+  background-color: #00b5ff;
+  outline: none;
+  border-radius: 12px;
   cursor: pointer;
+  border: 2px solid #00b5ff;
+  transition: all 200ms ease-in-out;
 }
-
-form button:hover {
-  background-color: #0095DD;
+.dashboardForm button:hover {
+  background-color: #fff;
+  color: #00b5ff;
 }

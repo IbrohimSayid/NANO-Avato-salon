@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./SignIn.css";
+import SignInImg from "../../img/SignUpImg.png";
 
 function SignIn() {
   const [formData, setFormData] = useState({
@@ -43,11 +44,13 @@ function SignIn() {
 
   return (
     <div className="signinContainer">
-      <div className="signinTitle">
-        <h1>Nice to see you!</h1>
-        <p>Enter your email and password to sign in</p>
+      <div className="SignInImg">
+        <img src={SignInImg} alt="IMG" />
       </div>
       <form onSubmit={handleSubmit} className="signinForm">
+        <div className="title">
+          <h1>Nice to meet you</h1>
+        </div>
         <div className="signinInput">
           <label htmlFor="email">Email</label>
           <input

@@ -4,96 +4,43 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-html {
-  height: 100%;
-  margin: 0;
-}
 
-body {
-  background-color: #22223b;
-}
-
-.signupCotainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 54.5px;
-  margin-top: 2%;
-}
-.title {
-  display: flex;
-  flex-direction: column;
-  color: #f2e9e4;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.title h1 {
-  font-size: 30px;
-}
-.title p {
-  font-size: 14px;
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.signupForm {
-  border: 2px solid #f2e9e4;
-}
-.signupInput {
-  display: flex;
-  flex-direction: column;
+.signupCotainer, .SignUpFormContainer {
   width: 100%;
-}
-.signupInput label {
-  font-size: 14px;
-  line-height: 19.6px;
-  color: #f2e9e4;
-  text-align: start;
-}
-.signupInput input {
-  width: 350px;
-  padding: 15px 20px;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #f2e9e4;
-  outline: none;
-  border: 2px solid #f2e9e4;
+  max-width: 100%;
 }
 
-.signupInput input::after {
-  background-color: transparent;
+.SignUpFormContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
 }
 
-.signupInput input::-moz-placeholder {
-  color: #f2e9e4;
+.SignUpFormContainer .FormImg img {
+  height: 100vh;
+  padding: 0;
+  max-height: max-content;
 }
-.signupInput input::placeholder {
-  color: #f2e9e4;
-  font-family: "Poppins", sans-serif;
+
+.signupForm {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  margin: 40px 5%;
 }
-.checkboxInput {
-  color: #f2e9e4;
+
+.signupForm .signupInput {
+  width: 530px;
 }
-.signupBtn {
-  width: 350px;
-  height: 45px;
-  color: #f2e9e4;
-  background-color: #22223b;
-  border: none;
-  outline: none;
-  border-radius: 12px;
-  cursor: pointer;
-  border: 2px solid #f2e9e4;
-  transition: all 200ms ease-in-out;
-}
-.signupBtn:hover {
-  background-color: #f2e9e4;
-  color: #22223b;
-}
+
 .checkboxInput {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between checkbox and label */
-  color: #f2e9e4;
+  gap: 8px;
+  color: #00B5FF;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -101,25 +48,40 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #f2e9e4;
+  accent-color: #00B5FF;
 }
 
 .checkboxInput label {
   font-size: 14px;
   line-height: 19.6px;
-  color: #fca311;
+  color: #00B5FF;
   margin: 0;
 }
 
 .haveAccount {
   color: #9a8c98;
   display: flex;
-  align-items: center;
   font-size: 15px;
 }
 
 .haveAccount a {
   font-weight: 700;
-  color: #fff;
+  color: #00B5FF;
   text-decoration: none;
+}
+
+.signupBtn {
+  width: 100%;
+  height: 45px;
+  color: #f2e9e4;
+  background-color: #00B5FF;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid #00B5FF;
+  transition: all 200ms ease-in-out;
+}
+.signupBtn:hover {
+  background-color: #fff;
+  color: #00B5FF;
 }

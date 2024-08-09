@@ -1,99 +1,48 @@
 .signinContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
-  
 }
 
-.signinTitle {
-  text-align: center;
-  color: #fff;
+.signinContainer .SignInImg img {
+  height: 100vh;
 }
 
-form {
+.signinForm {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  border: 2px solid #bfdbf7;
-  padding: 30px 20px;
-  align-items: center;
+  align-items: start;
+  gap: 50px;
+  margin: 100px 5%;
 }
 
-.signinTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 35.5px;
-}
-
-.signinTitle h1 {
-  font-size: 30px;
-  font-family: "Poppins", sans-serif;
-  line-height: 39px;
-}
-
-.signinTitle p {
-  color: #a0aec0;
-  font-size: 14px;
-}
-
-.signinInput {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
-}
-
-.signinInput label {
-  color: #a0aec0;
-  font-size: 14px;
-}
-
-.signinInput input {
-  width: 350px;
-  padding: 15px 20px;
-  border-radius: 20px;
-  background-color: transparent;
-  color: #fff;
-  outline: none;
-  border: 2px solid #75768b;
-}
-
-.signinInput input::-moz-placeholder {
-  color: #fff;
-}
-
-.signinInput input::placeholder {
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+.signinForm .signinInput {
+  width: 500px;
 }
 
 .signinBtn {
-    width: 350px;
-    height: 45px;
-    color: #fff;
-    background-color: #0075ff;
-    border: none;
-    outline: none;
-    border-radius: 12px;
-    cursor: pointer;
+  width: 100%;
+  height: 45px;
+  color: #f2e9e4;
+  background-color: #00b5ff;
+  outline: none;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid #00b5ff;
+  transition: all 200ms ease-in-out;
 }
-
 .signinBtn:hover {
-    background-color: #033e81;
+  background-color: #fff;
+  color: #00b5ff;
 }
 
 .havenotAccount {
-    display: flex;
-    flex-direction: row;
-    color: #75768b;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #75768b;
 }
 
 .havenotAccount a {
-   color: #fff;
-   font-weight: 700;
-   text-decoration: none;
+  color: #00b5ff;
+  font-weight: 700;
+  text-decoration: none;
 }

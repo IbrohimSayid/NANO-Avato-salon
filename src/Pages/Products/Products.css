@@ -22,20 +22,20 @@
 .productCard h3 {
   margin: 10px 0;
   font-size: 20px;
-  color: #fff;
+  color: #0075ff;
   font-family: "Poppins", sans-serif;
 }
 
 .productCard p {
   margin: 5px 0;
   font-size: 17px;
-  color: #fff;
+  color: #0075ff;
   font-family: "Poppins", sans-serif;
 }
 
 .productCard button {
   background-color: #0075ff;
-  color: #fff ;
+  color: #fff;
   border: none;
   outline: none;
   border-radius: 15px;

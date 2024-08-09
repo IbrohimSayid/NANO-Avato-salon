@@ -9,26 +9,26 @@ function Products() {
     setProducts(storedProducts);
   }, []);
 
-  const handleDelete = (productName) => {
-    const filteredProducts = products.filter(
-      (product) => product.productName !== productName
-    );
-    setProducts(filteredProducts);
-    localStorage.setItem("products", JSON.stringify(filteredProducts));
+  const handleDelete = (productId) => {
+    if (window.confirm("Are you sure you want to delete this card?")) {
+      const filteredProducts = products.filter(
+        (product) => product.id !== productId
+      );
+      setProducts(filteredProducts);
+      localStorage.setItem("products", JSON.stringify(filteredProducts));
+    }
   };
 
   return (
     <div className="productsPage">
       {products.map((product) => (
-        <div key={product.productName} className="productCard">
+        <div key={product.id} className="productCard">
           <img src={product.productImg} alt={product.productName} />
           <h3>{product.productName}</h3>
-          <p>Meal Name: {product.productCategory}</p>
-          <p>Igredient: {product.productPrice}</p>
+          <p>Product Category: {product.productCategory}</p>
+          <p>Price: {product.productPrice}</p>
           <p>Description: {product.description}</p>
-          <button onClick={() => handleDelete(product.productName)}>
-            Delete
-          </button>
+          <button onClick={() => handleDelete(product.id)}>Delete</button>
         </div>
       ))}
     </div>

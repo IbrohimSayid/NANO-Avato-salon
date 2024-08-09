@@ -33,7 +33,7 @@ function Dashboard() {
     <>
       <div className="productsForm">
         <h2>Add New Product</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="dashboardForm">
           <div>
             <label>Product Name:</label>
             <input
@@ -54,7 +54,7 @@ function Dashboard() {
             ></input>
           </div>
           <div>
-            <label>Indegrients:</label>
+            <label>Characteristic:</label>
             <input
               type="text"
               name="productPrice"

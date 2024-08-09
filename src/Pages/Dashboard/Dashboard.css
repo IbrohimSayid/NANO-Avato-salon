@@ -1,0 +1,58 @@
+.productsForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  gap: 7%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+}
+
+form div label {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form div input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: 2px solid #e5e5e5;
+  border: none;
+}
+
+form textarea {
+  padding: 10px 15px;
+  border-radius: 5px;
+  height: 70px;
+  border: none;
+  outline: 2px solid #e5e5e5;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: 2px solid #00B5FF;
+  background-color: #00B5FF;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0095DD;
+}

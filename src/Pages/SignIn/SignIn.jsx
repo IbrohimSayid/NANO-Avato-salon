@@ -19,7 +19,7 @@ function SignIn() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { email, password } = formData;
 
@@ -28,17 +28,22 @@ function SignIn() {
       return;
     }
 
-    const storedData = localStorage.getItem("userData");
-    const userData = storedData ? JSON.parse(storedData) : null;
+    try {
+      const response = await fetch("https://dummyjson.com/users");
+      const data = await response.json();
 
-    if (
-      userData &&
-      userData.email === email &&
-      userData.password === password
-    ) {
-      navigate("/dashboard");
-    } else {
-      alert("Unknown user, incorrect email or password.");
+      const user = data.users.find(
+        (user) => user.email === email && user.password === password
+      );
+
+      if (user) {
+        navigate("/dashboard");
+      } else {
+        alert("Unknown user, incorrect email or password.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
     }
   };
 
@@ -79,7 +84,7 @@ function SignIn() {
           Sign In
         </button>
         <p className="havenotAccount">
-          Dont have an account?<Link to="/signup">SignUp</Link>
+          Don't have an account?<Link to="/signup">SignUp</Link>
         </p>
       </form>
     </div>

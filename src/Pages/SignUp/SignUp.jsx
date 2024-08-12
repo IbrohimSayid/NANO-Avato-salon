@@ -11,7 +11,7 @@ function SignUp() {
     password: "",
   });
   const [save, setSave] = useState(false);
-  const navigate = useNavigate(); // useNavigate hook'dan foydalanish
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
@@ -21,22 +21,41 @@ function SignUp() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const { fullname, email, password } = formData;
 
     if (fullname && email && password) {
-      const fakeApiCall = () =>
-        new Promise((resolve) =>
-          setTimeout(() => resolve({ success: true }), 1000)
-        );
+      try {
+        // API so'rovini yuborish
+        const response = await fetch("https://dummyjson.com/users/add", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: fullname,
+            email,
+            password,
+            avatar: formData.avatar, // Agar API avatar qo'shishni qo'llab-quvvatlamasa, bu satrni olib tashlashingiz mumkin
+          }),
+        });
 
-      fakeApiCall().then((response) => {
-        if (response.success && save) {
-          localStorage.setItem("userData", JSON.stringify(formData));
-          navigate("/dashboard"); // Bu yerda navigate ni to'g'ridan-to'g'ri chaqiramiz
+        const result = await response.json();
+
+        if (response.ok) {
+          // Ma'lumotlarni LocalStorage-ga saqlash
+          if (save) {
+            localStorage.setItem("userData", JSON.stringify(formData));
+          }
+          navigate("/dashboard");
+        } else {
+          alert("Failed to register. Please try again.");
         }
-      });
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      }
     } else {
       alert("Please fill in all the fields.");
     }
